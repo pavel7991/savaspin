@@ -1,18 +1,154 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<meta
-			name="viewport"
-			content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
-		>
-		<meta
-			http-equiv="X-UA-Compatible"
-			content="ie=edge"
-		>
-		<title>Document</title>
-	</head>
-	<body>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<title>Rolletto Casino</title>
+	
+	<meta name="description" content="Lorem">
+	<link href="Lorem" rel="canonical">
+	
+	<meta property="og:type" content="article">
+	<meta property="og:title" content="Lorem">
+	<meta property="og:description" content="Lorem">
+	<meta property="og:url" content="Lorem">
+	<meta property="og:image" content="./images/banners/preview.png">
+	<meta property="og:image:secure_url" content="./images/banners/preview.png">
+	
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Lorem">
+	<meta name="twitter:description" content="Lorem">
+	<meta name="twitter:image" content="./images/banners/preview.png">
+	
+	<link rel="icon" type="image/png" sizes="16x16" href="./images/favicons/favicon-16.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="./images/favicons/favicon-32.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="./images/favicons/favicon-apple.png">
+	
+	<link rel="stylesheet" href="css/styles.css">
+	
+	<meta name="robots" content="ALL">
+</head>
+
+<body>
+<div class="layout" data-js-layout>
+	<header class="header">
+		<div class="container">
+			<div class="header__content">
+				<a href="/" class="header__logo" aria-label="Home">
+					<img src="./images/icons/logo.svg" alt="logo" height="32" width="83">
+				</a>
+				<a href="/" class="header__logo-mobile" aria-label="Home">
+					<img src="./images/icons/logo-inline.svg" alt="logo" width="108" height="20">
+				</a>
+				
+				<div class="header__auth">
+					<a href="/login.html" class="header__auth-login">Log in</a>
+					<button class="header__auth-sing-up psvn" type="button">Sing up</button>
+				</div>
+			</div>
+		</div>
+	</header>
+	
+	<div class="burger-menu">
+		<div class="burger-menu__inner">
+			<div class="burger-menu__btn-wrapper">
+				<button
+					class="burger-menu__btn"
+					aria-label="open menu"
+					data-js-burger-button
+				>
+					<img
+						src="./images/icons/burger.svg"
+						alt="open menu"
+						height="24" width="24"
+					>
+				</button>
+			</div>
+			<a href="/" class="burger-menu__logo">
+				<img
+					src="./images/icons/logo-inline.svg"
+					alt="logo"
+					width="141" height="26"
+				>
+			</a>
+		</div>
+	</div>
+	
+	<aside class="sidebar">
+		<nav class="sidebar__menu">
+			<ul class="sidebar__list">
+				<li class="sidebar__item">
+					<a href="./app.html" class="sidebar__link" title="App">
+						<i class="sidebar__link-icon">
+							<img src="./images/icons/app.svg" alt="app" height="24" width="24">
+						</i>
+						<span class="sidebar__link-text">App</span>
+					</a>
+				</li>
+				<li class="sidebar__item">
+					<a href="./review.html" class="sidebar__link" title="Review">
+						<i class="sidebar__link-icon">
+							<img src="./images/icons/review.svg" alt="app" height="24" width="24">
+						</i>
+						<span class="sidebar__link-text">Review</span>
+					</a>
+				</li>
+			</ul>
+		</nav>
+	</aside>
+	
+	<main class="main-content">
+		<div class="container">
+			<section class="contact-form">
+				<h1>Сontacts</h1>
+				<form class="contact-form__form">
+					<label class="contact-form__label" for="form-email">Email</label>
+					<input type="email" name="email" class="contact-form__input" id="form-email" />
+					
+					<label class="contact-form__label" for="form-message">Message</label>
+					<textarea name="message" class="contact-form__textarea" id="form-message"></textarea>
+					
+					<button type="submit" class="contact-form__button">Send</button>
+				</form>
+			</section>
 		
-	</body>
+		</div>
+	</main>
+	
+	<div class="scroll-to-up" data-js-scroll-to-up>
+		<button class="scroll-to-up__btn" aria-label="scroll to up"></button>
+	</div>
+	
+	<footer class="footer">
+		<div class="container">
+			<nav class="footer__nav">
+				<ul class="footer__nav-list">
+					<li><a href="./contacts.html" class="footer__nav-link">Contacts</a></li>
+					<li><a href="./private_policy.html" class="footer__nav-link">Privacy Policy</a></li>
+					<li><a href="./terms_conditions.html" class="footer__nav-link">Terms & Conditions</a></li>
+					<li><a href="#" class="footer__nav-link">FAQs</a></li>
+				</ul>
+			</nav>
+			
+			<div class="footer__copyright">
+				<img
+					src="images/icons/censor.svg"
+					class="footer__copyright-icon"
+					alt="18+"
+					height="24" width="25"
+				>
+				<p>© savaspin.com 2025. All rights reserved.</p>
+			</div>
+		</div>
+	</footer>
+
+</div><!--END layout-->
+
+<script src="scripts/open-sidebar.js" defer></script>
+<script src="scripts/scrollToTop.js" defer></script>
+</body>
 </html>
+
+

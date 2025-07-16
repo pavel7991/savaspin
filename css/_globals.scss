@@ -18,6 +18,15 @@ section, .mini-game {
   padding-bottom: $margin-block-section;
 }
 
+.anchor-target {
+  @include mobile-above {
+    scroll-margin-top: calc($header-height + rem(20));
+  }
+  @include mobile {
+    scroll-margin-top: calc($header-height-mobile + rem(20));
+  }
+}
+
 section:not(:last-child) {
   border-bottom: $border;
 }

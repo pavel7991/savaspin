@@ -1,0 +1,19 @@
+@use '../helpers' as *;
+
+.info-page-content  {
+  h1 {
+    @include fluid-text(32, 28);
+  }
+
+  p {
+    @include fluid-text(16, 14);
+    font-weight: 500;
+    line-height: 1.5;
+    margin-bottom: fluid(40, 24);
+  }
+
+  li {
+    font-weight: 500;
+    @include fluid-text(16, 14);
+  }
+}

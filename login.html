@@ -2,14 +2,33 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="icon" type="image/svg" href="./images/favicons/favicon.svg">
-		<link rel="stylesheet" href="css/styles.css">
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap" rel="stylesheet">
 		
-		<title>Savaspin Casino</title>
+		<title>Rolletto Casino | Login</title>
+		
+		<meta name="description" content="Lorem">
+		<link href="Lorem" rel="canonical">
+		
+		<meta property="og:type" content="article">
+		<meta property="og:title" content="Lorem">
+		<meta property="og:description" content="Lorem">
+		<meta property="og:url" content="Lorem">
+		<meta property="og:image" content="./images/banners/preview.png">
+		<meta property="og:image:secure_url" content="./images/banners/preview.png">
+		
+		<meta name="twitter:card" content="summary">
+		<meta name="twitter:title" content="Lorem">
+		<meta name="twitter:description" content="Lorem">
+		<meta name="twitter:image" content="./images/banners/preview.png">
+		
+		<link rel="icon" type="image/png" sizes="16x16" href="./images/favicons/favicon-16.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="./images/favicons/favicon-32.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="./images/favicons/favicon-apple.png">
+		
+		<link rel="stylesheet" href="css/styles.css">
+		
+		<meta name="robots" content="ALL">
 	</head>
 	
 	<body>
@@ -18,11 +37,14 @@
 				<div class="container">
 					<div class="header__content">
 						<a href="/" class="header__logo" aria-label="Home">
-							<img src="./images/icons/logo.svg" height="32" width="83" loading="lazy"/>
+							<img src="./images/icons/logo.svg" alt="logo" height="32" width="83">
+						</a>
+						<a href="/" class="header__logo-mobile" aria-label="Home">
+							<img src="./images/icons/logo-inline.svg" alt="logo" width="108" height="20">
 						</a>
 						
 						<div class="header__auth">
-							<a href="#" class="header__auth-login psvn">Log in</a>
+							<a href="/login.html" class="header__auth-login">Log in</a>
 							<button class="header__auth-sing-up psvn" type="button">Sing up</button>
 						</div>
 					</div>
@@ -47,6 +69,7 @@
 					<a href="/" class="burger-menu__logo">
 						<img
 							src="./images/icons/logo-inline.svg"
+							alt="logo"
 							width="141" height="26"
 						>
 					</a>
@@ -56,24 +79,16 @@
 			<aside class="sidebar">
 				<nav class="sidebar__menu">
 					<ul class="sidebar__list">
-						<li>
-							<a href="/login.html" class="sidebar__link" title="Login">
-								<i class="sidebar__link-icon">
-									<img src="./images/icons/login.svg" alt="app" height="24" width="24">
-								</i>
-								<span class="sidebar__link-text">Login</span>
-							</a>
-						</li>
-						<li>
-							<a href="#" class="sidebar__link" title="App">
+						<li class="sidebar__item">
+							<a href="./app.html" class="sidebar__link" title="App">
 								<i class="sidebar__link-icon">
 									<img src="./images/icons/app.svg" alt="app" height="24" width="24">
 								</i>
 								<span class="sidebar__link-text">App</span>
 							</a>
 						</li>
-						<li>
-							<a href="#" class="sidebar__link" title="Review">
+						<li class="sidebar__item">
+							<a href="./review.html" class="sidebar__link" title="Review">
 								<i class="sidebar__link-icon">
 									<img src="./images/icons/review.svg" alt="app" height="24" width="24">
 								</i>
@@ -83,7 +98,6 @@
 					</ul>
 				</nav>
 			</aside>
-			
 			
 			<main class="main-content">
 				<div class="container">
@@ -173,7 +187,7 @@
 						</ul>
 						<p>By logging in at Rolletto, you’ll unlock all these incredible features and more. Begin your adventure today and enjoy a premium experience like no other!</p>
 					</section>
-				
+					
 					<section>
 						<h2>No Social Media Required</h2>
 						<p>Accessing your account is a breeze, whether you’re on your computer or a mobile device! While there’s no option to login through social media, you can seamlessly sign in directly via the website—no app needed. The platform’s responsive design ensures smooth navigation and functionality on all devices, offering a hassle-free gaming experience wherever you are.</p>
@@ -186,7 +200,7 @@
 						<p>Don’t miss out on the chance to elevate your experience every time you log in. With an intuitive platform and dynamic rewards system, this is more than just gaming—it’s a gateway to excitement and limitless possibilities. Take control of your journey today and explore a realm where fun and rewards collide effortlessly.</p>
 					</section>
 					
-					<section>
+					<section class="anchor-target" id="faq">
 						<h2>FAQ</h2>
 						<h3>Do I need to create an account at the casino to enjoy real money gaming?</h3>
 						<p>Yes, you must complete the registration process to play for real money, as having an account ensures your personal details and transactions are securely managed.</p>
@@ -212,9 +226,10 @@
 				<div class="container">
 					<nav class="footer__nav">
 						<ul class="footer__nav-list">
-							<li><a href="#" class="footer__nav-link">Privacy Policy</a></li>
-							<li><a href="#" class="footer__nav-link">Terms & Conditions</a></li>
-							<li><a href="#" class="footer__nav-link">FAQs</a></li>
+							<li><a href="./contacts.html" class="footer__nav-link">Contacts</a></li>
+							<li><a href="./private_policy.html" class="footer__nav-link">Privacy Policy</a></li>
+							<li><a href="./terms_conditions.html" class="footer__nav-link">Terms & Conditions</a></li>
+							<li><a href="#faq" class="footer__nav-link">FAQs</a></li>
 						</ul>
 					</nav>
 					
@@ -229,7 +244,7 @@
 					</div>
 				</div>
 			</footer>
-			
+		
 		</div><!--END layout-->
 		
 		<script src="scripts/open-sidebar.js" defer></script>

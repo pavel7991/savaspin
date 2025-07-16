@@ -1,6 +1,8 @@
 @use 'normalize';
+@use 'fonts';
 @use 'utils';
 @use 'globals';
+
 
 @use 'blocks/layout';
 @use 'blocks/header';
@@ -15,3 +17,6 @@
 
 @use 'blocks/login-page';
 @use 'blocks/reviews';
+@use 'blocks/contact-form';
+
+@use 'blocks/info-page-content';

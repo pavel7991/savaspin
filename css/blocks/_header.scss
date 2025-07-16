@@ -27,7 +27,7 @@
     @include mobile {
       height: $header-height-mobile;
       justify-content: center;
-      row-gap: rem(10);
+      row-gap: rem(6);
       flex-direction: column;
     }
   }
