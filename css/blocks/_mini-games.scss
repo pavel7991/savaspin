@@ -1,0 +1,101 @@
+@use '../helpers/index' as *;
+@use '../components/index' as *;
+
+
+.mini-game {
+  @include responsive-grid;
+
+  &__item {
+    position: relative;
+    border-radius: rem(10);
+    overflow: hidden;
+
+    &::before {
+      z-index: 2;
+      content: '';
+      position: absolute;
+      display: block;
+      inset: 0;
+      background-color: $color-white;
+      opacity: 0;
+      transition-duration: $transition-duration;
+    }
+
+    &:hover::before {
+      opacity: 0.2;
+    }
+  }
+
+  &__content {
+    z-index: 3;
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    text-align: center;
+    text-transform: uppercase;
+    padding: rem(10) rem(5);
+    user-select: none;
+  }
+
+  &__item:nth-child(3n+1) .mini-game__content {
+    background: $background-gradient-purple;
+  }
+  &__item:nth-child(3n+2) .mini-game__content{
+    background: $background-gradient-green;
+  }
+  &__item:nth-child(3n+3) .mini-game__content{
+    background: $background-gradient-red;
+  }
+
+  &__image {
+    z-index: 1;
+    position: relative;
+    @include square(100%);
+    transition-duration: $transition-duration;
+    transform: scale(1);
+  }
+  &__item:hover {
+    .mini-game__image {
+      transform: scale(1.1);
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: rem(14);
+    line-height: rem(14);
+  }
+
+  &__caption {
+    font-weight: 500;
+    font-size: rem(10);
+    line-height: rem(12);
+  }
+
+
+  &__button {
+    z-index: 4;
+    position: absolute;
+    top: 100%; left: 50%;
+    transform: translate(-50%, 0);
+    @extend %button-primary;
+    font-size: rem(14);
+    border-radius: rem(5);
+    font-weight: 500;
+    opacity: 0;
+    text-transform: uppercase;
+    box-shadow: $box-shadow;
+  }
+
+  &__item:hover {
+    .mini-game__button {
+        top: 50%;
+        opacity: 1;
+    }
+
+  }
+
+}

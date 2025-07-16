@@ -1,0 +1,29 @@
+@use '../helpers/index' as *;
+
+@mixin button($bg-color) {
+    padding: rem(6) rem(20);
+    font-size: 1rem;
+    border-radius: rem(30);
+    color: $color-white;
+    transition-duration: $transition-duration;
+    border: 2px solid $bg-color;
+
+}
+
+%button-primary {
+  background-color: $color-primary;
+  @include button($color-primary);
+  @include hover {
+    background-color: $color-primary-accent;
+    border: 2px solid $color-primary-accent;
+  }
+}
+
+%button-secondary {
+  background-color: transparent;
+  @include button($color-secondary);
+  @include hover {
+    background-color: $color-secondary;
+  }
+}
+

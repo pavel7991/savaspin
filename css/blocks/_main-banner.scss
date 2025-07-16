@@ -1,0 +1,99 @@
+@use '../helpers/index' as *;
+@use '../components/index' as *;
+
+.main-banner {
+
+  &__wrapper {
+    position: relative;
+    @include flex-center;
+    min-height: fluid(450, 150);
+    padding-block: fluid(20, 10);
+    border-radius: rem(10);
+    overflow: hidden;
+  }
+
+  & {
+    @include hover {
+      .main-banner__content {
+        background-color: rgba($color-dark-30, 0.9);
+      }
+    }
+  }
+  &__content {
+    position: relative;
+    z-index: 2;
+    @include flex-center(true);
+    flex-direction: column;
+    row-gap: 1rem;
+    padding-block: fluid(80, 20);
+    padding-inline: fluid(200, 20);
+    border-radius: rem(10);
+    background-color: rgba($color-dark-30, 0.8);
+    box-shadow: 1px 2px 20px rgba($color-dark-30, 0.8);
+    transition-duration: $transition-duration;
+    &-title {
+
+    }
+
+    &-btn {
+      @extend %button-primary;
+      padding: 0.6rem 1.5rem;
+      font-size: 1rem;
+    }
+  }
+
+  &__img-overlay {
+    @include square(100%);
+    position: absolute;
+    inset: 0;
+  }
+
+
+  &__picture {
+    display: block;
+    @include square(100%);
+
+    &::before {
+      content: '';
+      display: block;
+      z-index: 1;
+      position: absolute;
+      @include square(100%);
+      inset: 0;
+      background: rgba($color-white, 0.1);
+      transition-duration: $transition-duration;
+    }
+  }
+
+  & {
+    @include hover {
+      .main-banner__picture::before {
+        background-color: rgba($color-white, 0.4);
+      }
+    }
+  }
+
+
+  &__image {
+    position: relative;
+    display: block;
+    min-height: 100%;
+    min-width: 100%;
+    user-select: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    object-fit: cover;
+    object-position: center;
+    transition: $transition-duration;
+  }
+
+  & {
+    @include hover {
+      .main-banner__image {
+        transform: translate(-50%, -50%) scale(1.1);
+      }
+    }
+  }
+
+}

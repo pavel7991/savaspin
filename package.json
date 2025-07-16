@@ -1,0 +1,27 @@
+{
+  "name": "vavada",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently \"vite\" \"sass --watch css/styles.scss css/styles.css\"",
+    "watch:scss": "sass --watch css/styles.scss css/styles.css",
+    "prefix": "npx postcss css/styles.css --replace --use autoprefixer",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "browserslist": [
+    "> 0.5%",
+    "last 2 versions",
+    "not dead",
+    "not op_mini all"
+  ],
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "concurrently": "^9.2.0",
+    "postcss": "^8.5.6",
+    "postcss-cli": "^11.0.1",
+    "sass": "^1.89.2",
+    "vite": "^7.0.0"
+  }
+}

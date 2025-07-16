@@ -1,0 +1,39 @@
+@use '../helpers/index' as *;
+
+.footer {
+  grid-area: footer;
+
+  &__nav {
+    padding-block: rem(20);
+    border-top: $border;
+    border-bottom: $border;
+
+    &-list {
+      @include flex-center;
+      column-gap: 1rem;
+    }
+
+    &-link {
+      font-size: rem(14);
+      color: $color-footer-link;
+
+      @include hover {
+        color: $color-footer-link-hover;
+      }
+    }
+
+  }
+
+  &__copyright {
+    @include flex-center;
+    padding-block: rem(20);
+    font-size: rem(14);
+    color: $color-footer-link;
+    column-gap: 1rem;
+
+    &-icon {
+      width: rem(24);
+      height: rem(25);
+    }
+  }
+}

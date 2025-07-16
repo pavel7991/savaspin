@@ -1,0 +1,83 @@
+@use 'functions' as *;
+@use 'media' as *;
+
+// --- Container sizes
+:root {
+  --container-width: #{rem(1500)};
+  --container-padding-x: #{rem(40)};
+
+  @include tablet {
+    --container-padding-x: #{rem(20)};
+  }
+}
+
+//width
+$sidebar-width: rem(64);
+$sidebar-open-width: rem(320);
+
+// icon-sizes in aside
+$header-height: rem(64);
+$sidebar-icon-size: rem(48);
+$sidebar-padding-inline: calc(($sidebar-width - $sidebar-icon-size) /2);
+
+
+// --- Colors ---
+$color-black: #011111;
+$color-dark-10: #0F3A3A;
+$color-dark-20: #061F1F;
+$color-dark-30: #061F1F;
+
+
+
+$color-footer-link: #98B6B6;
+$color-footer-link-hover: #C8D7D7;
+
+
+$color-white: #fff;
+$color-light: #98B6B6;
+
+$color-primary: #3D5CFF;
+$color-primary-accent: #5A75FF;
+$color-secondary: #205757;
+
+
+$color-accent: #0AF522;
+
+//gap
+
+$gap-sm: rem(10);
+$gap-md: rem(20);
+$gap-lg: rem(30);
+$gap-xlg: rem(40);
+
+
+//border
+$border-radius: rem(5);
+$border-color: #585c834d;
+$border: 1px solid $border-color;
+
+
+
+$box-shadow: 0 4px 8px 0 #0000003D,0 0 1px 0 #00000052;
+
+//gap-section
+$margin-block-section: fluid(30, 20);
+
+// --- Fonts ---
+$font-family-base: 'OpenSans', sans-serif;
+
+// ---Transitions ---
+$transition-duration: 0.3s;
+
+// z-index
+$z-index-header: 100;
+
+//
+$background-gradient-red: linear-gradient(180deg, rgba(232, 0, 16, 0.00) 0%, #8F000A 100%);
+$background-gradient-purple: linear-gradient(180deg, rgba(109, 0, 216, 0.00) 0%, #47008D 100%);
+$background-gradient-green: linear-gradient(180deg, rgba(46, 235, 0, 0.00) 0%, #105200 100%);
+
+
+
+
+

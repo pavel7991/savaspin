@@ -1,0 +1,59 @@
+@use '../helpers/index' as *;
+
+.sidebar {
+  grid-area: sidebar;
+  background-color: $color-dark-20;
+  padding-inline: $sidebar-padding-inline;
+
+  &__menu {
+    padding-top: rem(8);
+    position: sticky;
+    top: $header-height;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(5);
+  }
+
+  &__link {
+    width: 100%;
+    position: relative;
+    align-items: center;
+    min-height: $sidebar-icon-size;
+    padding-left: $sidebar-icon-size;
+    border-radius: $border-radius;
+
+
+    @include hover {
+      background-color: $color-dark-10;
+    }
+
+    &-icon {
+      position: absolute;
+      left: 0; top: 50%;
+      transform: translateY(-50%);
+      @include square($sidebar-icon-size);
+      @include flex-center;
+      transition-duration: $transition-duration;
+
+      img {
+        @include square(rem(24));
+      }
+    }
+    &-text {
+      width: 0;
+      transition-duration: $transition-duration;
+      opacity: 0;
+    }
+
+  }
+}
+
+
+.menu-is-open .sidebar .sidebar__link-text {
+  padding-right: rem(12);
+  width: auto;
+  opacity: 1;
+}

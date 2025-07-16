@@ -1,0 +1,17 @@
+@use 'normalize';
+@use 'utils';
+@use 'globals';
+
+@use 'blocks/layout';
+@use 'blocks/header';
+@use 'blocks/sidebar';
+@use 'blocks/burger-menu';
+@use 'blocks/main-content';
+@use 'blocks/main-banner';
+@use 'blocks/mini-games';
+
+@use 'components/scroll-to-up';
+@use 'blocks/footer';
+
+@use 'blocks/login-page';
+@use 'blocks/reviews';

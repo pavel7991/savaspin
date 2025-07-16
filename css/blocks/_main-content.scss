@@ -1,0 +1,7 @@
+@use '../helpers/index' as *;
+@use '../components/index' as *;
+
+.main-content {
+  grid-area: main;
+}
+

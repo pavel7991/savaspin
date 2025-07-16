@@ -1,0 +1,38 @@
+@use '../helpers/index' as *;
+
+.scroll-to-up {
+  z-index: $z-index-header;
+  position: fixed;
+  bottom: rem(30);
+  right: rem(-100);
+  @include square(rem(50));
+  @include flex-center;
+  border-radius: 50%;
+  cursor: pointer;
+  opacity: 0;
+  background-color: $color-secondary;
+  transition-duration: $transition-duration;
+
+  @include hover {
+    background-color: $color-dark-10;
+  }
+
+  &.show {
+    opacity: 1;
+    right: 30px;
+  }
+
+  &__btn {
+    border: none;
+    background-color: transparent;
+
+
+    &::after {
+      content: '';
+      display: block;
+      @include square(rem(24));
+      background-image: url('~icons/arr-to-up.svg');
+    }
+  }
+}
+

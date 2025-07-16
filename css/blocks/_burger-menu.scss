@@ -1,0 +1,48 @@
+@use '../helpers/index' as *;
+@use '../components/index' as *;
+
+.burger-menu {
+  z-index: $z-index-header;
+  position: sticky;
+  top: 0;
+  grid-area: burger;
+  padding-inline: $sidebar-padding-inline;
+  background-color: $color-dark-20;
+  box-shadow: $box-shadow;
+
+  &__inner {
+    position: relative;
+    @include flex-center;
+    height: 100%;
+  }
+
+  &__btn-wrapper {
+    left: 0;
+    position: absolute;
+    @include flex-center;
+    @include square($sidebar-icon-size);
+  }
+
+  &__btn {
+    transform: scaleX(1);
+    background-color: transparent;
+    border: none;
+    img {
+      @include square(rem(24));
+    }
+  }
+
+  &__logo {
+    width: 0;
+    opacity: 0;
+  }
+}
+
+.menu-is-open .burger-menu__btn {
+  transform: scaleX(-1);
+}
+.menu-is-open .burger-menu__logo {
+  width: rem(141);
+  height: rem(26);
+  opacity: 1;
+}

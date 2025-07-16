@@ -1,0 +1,21 @@
+@use '../helpers/index' as *;
+
+.layout {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: $sidebar-width 1fr;
+  grid-template-rows: $header-height 1fr auto;
+  grid-template-areas:
+    "burger header"
+    "sidebar main"
+    "sidebar footer"
+  ;
+  transition-duration: $transition-duration;
+
+  &.menu-is-open {
+    grid-template-columns: $sidebar-open-width 1fr;
+  }
+}
+
+
+

@@ -1,0 +1,42 @@
+@use '../helpers/index' as *;
+@use '../components/index' as *;
+
+.header {
+  z-index: $z-index-header;
+  position: sticky;
+  grid-area: header;
+  top: 0;
+  box-shadow: $box-shadow;
+  background-color: $color-black;
+
+  &__content {
+    height: $header-height;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__auth {
+    display: flex;
+    column-gap: rem(8);
+
+    &-login {
+      @extend %button-secondary;
+    }
+
+    &-sing-up {
+      @extend %button-primary;
+    }
+  }
+
+  &__logo {
+    width: rem(83);
+    opacity: 1;
+  }
+}
+
+.menu-is-open .header__logo {
+  width: 0;
+  opacity: 0;
+}
+

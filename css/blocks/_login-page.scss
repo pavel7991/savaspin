@@ -1,0 +1,11 @@
+@use '../helpers/index' as *;
+
+
+.auth-form {
+  @include flex-center;
+
+  &__link {
+    border-radius: rem(20);
+    overflow: hidden;
+  }
+}

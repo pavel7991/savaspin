@@ -1,0 +1,87 @@
+@use 'helpers' as *;
+
+html {
+  &.is-lock {
+    overflow: hidden;
+  }
+}
+
+body {
+  font-family: "Syne", sans-serif;
+  font-size: fluid-text(16, 14);
+  background-color: $color-black;
+  color: $color-light;
+}
+
+section {
+  margin-block: $margin-block-section;
+}
+
+hr {
+  border-color: $border-color;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: $color-white;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+h1 {
+  @include fluid-text(48, 28);
+}
+
+h2 {
+  @include fluid-text(40, 24);
+}
+
+h3 {
+  @include fluid-text(32, 20);
+}
+
+h4 {
+  @include fluid-text(28, 18);
+}
+
+h5  {
+  @include fluid-text(24, 16);
+}
+h6 {
+  @include fluid-text(20, 14);
+}
+
+a,
+button,
+label,
+input,
+textarea,
+select,
+svg * {
+  transition-duration: $transition-duration;
+}
+
+a {
+  color: inherit;
+
+  &[class] {
+    text-decoration: none;
+  }
+}
+
+:focus-visible {
+  outline: rem(2) dashed $color-light;
+  outline-offset: rem(4);
+  transition-duration: 0s !important;
+}
+
+a, button {
+  &[aria-label] {
+    position: relative;
+
+    &::before {
+      content: '';
+      @include abs-center;
+      @include square(rem(44));
+    }
+  }
+}
