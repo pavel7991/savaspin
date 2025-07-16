@@ -224,6 +224,9 @@ svg * {
   }
 }
 
+html {
+  overflow-x: hidden;
+}
 html.is-lock {
   overflow: hidden;
 }
@@ -317,13 +320,22 @@ a[aria-label]::before, button[aria-label]::before {
 .layout {
   min-height: 100vh;
   display: grid;
-  grid-template-columns: 4rem 1fr;
   grid-template-rows: 4rem 1fr auto;
-  grid-template-areas: "burger header" "sidebar main" "sidebar footer";
+  grid-template-areas: "header" "main" "footer";
   transition-duration: 0.3s;
+  padding-left: 4rem;
+  transition: transform 0.3s;
 }
-.layout.menu-is-open {
-  grid-template-columns: 20rem 1fr;
+.layout .main-content, .layout footer {
+  position: relative;
+  transition-duration: 0.3s;
+  left: 0;
+}
+.layout.menu-is-open .main-content, .layout.menu-is-open .footer {
+  left: calc(20rem - 4rem);
+}
+.layout.menu-is-open .sidebar {
+  width: 20rem;
 }
 
 .mini-game__button, .main-banner__content-btn, .header__auth-sing-up {
@@ -397,14 +409,20 @@ a[aria-label]::before, button[aria-label]::before {
 }
 
 .sidebar {
-  grid-area: sidebar;
+  z-index: 101;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
   background-color: #061F1F;
-  padding-inline: calc((4rem - 3rem) / 2);
+  width: 4rem;
+  transition-duration: 0.3s;
 }
 .sidebar__menu {
   padding-top: 0.5rem;
   position: sticky;
   top: 4rem;
+  padding-inline: calc((4rem - 3rem) / 2);
 }
 .sidebar__list {
   display: flex;
@@ -458,13 +476,11 @@ a[aria-label]::before, button[aria-label]::before {
 }
 
 .burger-menu {
-  z-index: 100;
-  position: sticky;
-  top: 0;
-  grid-area: burger;
-  padding-inline: calc((4rem - 3rem) / 2);
+  height: 4rem;
+  width: 100%;
   background-color: #061F1F;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2392156863), 0 0 1px 0 rgba(0, 0, 0, 0.3215686275);
+  padding-inline: calc((4rem - 3rem) / 2);
 }
 .burger-menu__inner {
   position: relative;

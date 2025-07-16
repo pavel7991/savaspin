@@ -3,18 +3,30 @@
 .layout {
   min-height: 100vh;
   display: grid;
-  grid-template-columns: $sidebar-width 1fr;
   grid-template-rows: $header-height 1fr auto;
   grid-template-areas:
-    "burger header"
-    "sidebar main"
-    "sidebar footer"
+    "header"
+    "main"
+    "footer"
   ;
   transition-duration: $transition-duration;
+  padding-left: $sidebar-width;
+  transition: transform $transition-duration;
 
-  &.menu-is-open {
-    grid-template-columns: $sidebar-open-width 1fr;
+
+  .main-content, footer {
+    position: relative;
+    transition-duration: $transition-duration;
+    left: 0;
   }
+
+  &.menu-is-open .main-content, &.menu-is-open .footer  {
+    left: calc($sidebar-open-width - $sidebar-width);
+  }
+  &.menu-is-open .sidebar {
+    width: $sidebar-open-width;
+  }
+
 }
 
 

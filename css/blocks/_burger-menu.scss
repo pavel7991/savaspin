@@ -2,13 +2,11 @@
 @use '../components/index' as *;
 
 .burger-menu {
-  z-index: $z-index-header;
-  position: sticky;
-  top: 0;
-  grid-area: burger;
-  padding-inline: $sidebar-padding-inline;
+  height: $header-height;
+  width: 100%;
   background-color: $color-dark-20;
   box-shadow: $box-shadow;
+  padding-inline: $sidebar-padding-inline;
 
   &__inner {
     position: relative;

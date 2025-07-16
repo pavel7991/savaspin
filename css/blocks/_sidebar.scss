@@ -1,14 +1,19 @@
 @use '../helpers/index' as *;
 
 .sidebar {
-  grid-area: sidebar;
+  z-index: $z-index-sidebar;
+  position: fixed;
+  top: 0; left: 0;
+  height: 100%;
   background-color: $color-dark-20;
-  padding-inline: $sidebar-padding-inline;
+  width: $sidebar-width;
+  transition-duration: $transition-duration;
 
   &__menu {
     padding-top: rem(8);
     position: sticky;
     top: $header-height;
+    padding-inline: $sidebar-padding-inline;
   }
 
   &__list {
