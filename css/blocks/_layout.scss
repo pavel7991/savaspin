@@ -20,12 +20,29 @@
     left: 0;
   }
 
-  &.menu-is-open .main-content, &.menu-is-open .footer  {
-    left: calc($sidebar-open-width - $sidebar-width);
+
+  @include tablet-above {
+    &.menu-is-open .main-content, &.menu-is-open .footer  {
+      left: calc($sidebar-open-width - $sidebar-width);
+    }
   }
-  &.menu-is-open .sidebar {
-    width: $sidebar-open-width;
+  @include tablet {
+    &.menu-is-open .main-content, &.menu-is-open .footer  {
+      left: calc($sidebar-open-width-tablet - $sidebar-width);
+    }
   }
+
+  @include tablet-above {
+    &.menu-is-open .sidebar, &.menu-is-open .burger-menu {
+      width: $sidebar-open-width;
+    }
+  }
+  @include tablet {
+    &.menu-is-open .sidebar, &.menu-is-open .burger-menu {
+      width: $sidebar-open-width-tablet;
+    }
+  }
+
 }
 
 

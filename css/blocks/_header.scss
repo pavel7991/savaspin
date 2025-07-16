@@ -1,13 +1,15 @@
-@use '../helpers/index' as *;
-@use '../components/index' as *;
+@use '../helpers' as *;
+@use '../components' as *;
 
 .header {
   z-index: $z-index-header;
-  position: sticky;
+  position: fixed;
   grid-area: header;
-  top: 0;
+  top: 0; left: 0;
+  width: 100%;
   box-shadow: $box-shadow;
   background-color: $color-black;
+  padding-left: $sidebar-width;
 
   &__content {
     height: $header-height;

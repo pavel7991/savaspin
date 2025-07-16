@@ -3,6 +3,7 @@
 .sidebar {
   z-index: $z-index-sidebar;
   position: fixed;
+  overflow: hidden;
   top: 0; left: 0;
   height: 100%;
   background-color: $color-dark-20;
@@ -10,9 +11,8 @@
   transition-duration: $transition-duration;
 
   &__menu {
+    margin-top: $header-height;
     padding-top: rem(8);
-    position: sticky;
-    top: $header-height;
     padding-inline: $sidebar-padding-inline;
   }
 

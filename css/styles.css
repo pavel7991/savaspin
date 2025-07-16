@@ -226,14 +226,15 @@ svg * {
 
 html {
   overflow-x: hidden;
+  max-width: 100%;
 }
 html.is-lock {
-  overflow: hidden;
+  overflow-y: hidden;
 }
 
 body {
   font-family: "Syne", sans-serif;
-  font-size: fluid-text(16, 14);
+  font-size: clamp(0.875rem, 0.8233995585rem + 0.2207505519vw, 1rem);
   background-color: #011111;
   color: #98B6B6;
 }
@@ -331,11 +332,25 @@ a[aria-label]::before, button[aria-label]::before {
   transition-duration: 0.3s;
   left: 0;
 }
-.layout.menu-is-open .main-content, .layout.menu-is-open .footer {
-  left: calc(20rem - 4rem);
+@media (min-width: 48.06125rem) {
+  .layout.menu-is-open .main-content, .layout.menu-is-open .footer {
+    left: calc(20rem - 4rem);
+  }
 }
-.layout.menu-is-open .sidebar {
-  width: 20rem;
+@media (max-width: 48.06125rem) {
+  .layout.menu-is-open .main-content, .layout.menu-is-open .footer {
+    left: calc(17.1875rem - 4rem);
+  }
+}
+@media (min-width: 48.06125rem) {
+  .layout.menu-is-open .sidebar, .layout.menu-is-open .burger-menu {
+    width: 20rem;
+  }
+}
+@media (max-width: 48.06125rem) {
+  .layout.menu-is-open .sidebar, .layout.menu-is-open .burger-menu {
+    width: 17.1875rem;
+  }
 }
 
 .mini-game__button, .main-banner__content-btn, .header__auth-sing-up {
@@ -382,11 +397,14 @@ a[aria-label]::before, button[aria-label]::before {
 
 .header {
   z-index: 100;
-  position: sticky;
+  position: fixed;
   grid-area: header;
   top: 0;
+  left: 0;
+  width: 100%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2392156863), 0 0 1px 0 rgba(0, 0, 0, 0.3215686275);
   background-color: #011111;
+  padding-left: 4rem;
 }
 .header__content {
   height: 4rem;
@@ -411,6 +429,7 @@ a[aria-label]::before, button[aria-label]::before {
 .sidebar {
   z-index: 101;
   position: fixed;
+  overflow: hidden;
   top: 0;
   left: 0;
   height: 100%;
@@ -419,9 +438,8 @@ a[aria-label]::before, button[aria-label]::before {
   transition-duration: 0.3s;
 }
 .sidebar__menu {
+  margin-top: 4rem;
   padding-top: 0.5rem;
-  position: sticky;
-  top: 4rem;
   padding-inline: calc((4rem - 3rem) / 2);
 }
 .sidebar__list {
@@ -476,11 +494,16 @@ a[aria-label]::before, button[aria-label]::before {
 }
 
 .burger-menu {
+  z-index: 102;
+  position: fixed;
+  top: 0;
+  left: 0;
   height: 4rem;
-  width: 100%;
   background-color: #061F1F;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2392156863), 0 0 1px 0 rgba(0, 0, 0, 0.3215686275);
   padding-inline: calc((4rem - 3rem) / 2);
+  width: 4rem;
+  transition-duration: 0.3s;
 }
 .burger-menu__inner {
   position: relative;
@@ -775,6 +798,12 @@ a[aria-label]::before, button[aria-label]::before {
   justify-content: center;
   align-items: center;
   column-gap: 1rem;
+}
+@media (max-width: 31.31125rem) {
+  .footer__nav-list {
+    flex-direction: column;
+    row-gap: 0.3125rem;
+  }
 }
 .footer__nav-link {
   font-size: 0.875rem;
