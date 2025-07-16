@@ -1,10 +1,8 @@
 @use 'helpers' as *;
 
 html {
-  overflow-x: hidden;
-  max-width: 100%;
   &.is-lock {
-    overflow-y: hidden;
+    overflow: hidden;
   }
 }
 
@@ -15,7 +13,7 @@ body {
   color: $color-light;
 }
 
-section {
+section, .mini-game {
   margin-top: $margin-block-section;
   padding-bottom: $margin-block-section;
 }

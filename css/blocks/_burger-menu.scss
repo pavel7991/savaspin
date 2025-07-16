@@ -5,12 +5,18 @@
   z-index: $z-index-burger-menu;
   position: fixed;
   top: 0; left: 0;
-  height: $header-height;
-  background-color: $color-dark-20;
-  box-shadow: $box-shadow;
   padding-inline: $sidebar-padding-inline;
   width: $sidebar-width;
   transition-duration: $transition-duration;
+
+  @include mobile-above {
+    height: $header-height;
+    background-color: $color-dark-20;
+    box-shadow: $box-shadow;
+  }
+  @include mobile {
+    height: $header-height-mobile;
+  }
 
   &__inner {
     position: relative;
@@ -23,6 +29,12 @@
     position: absolute;
     @include flex-center;
     @include square($sidebar-icon-size);
+
+    @include mobile {
+      border: $border;
+      border-radius: $border-radius;
+      background-color: $color-dark-20;
+    }
   }
 
   &__btn {

@@ -40,7 +40,10 @@
 				<div class="container">
 					<div class="header__content">
 						<a href="/" class="header__logo" aria-label="Home">
-							<img src="./images/icons/logo.svg" height="32" width="83"/>
+							<img src="./images/icons/logo.svg" alt="logo" height="32" width="83">
+						</a>
+						<a href="/" class="header__logo-mobile" aria-label="Home">
+							<img src="./images/icons/logo-inline.svg" alt="logo" width="108" height="20">
 						</a>
 						
 						<div class="header__auth">
@@ -69,6 +72,7 @@
 					<a href="/" class="burger-menu__logo">
 						<img
 							src="./images/icons/logo-inline.svg"
+							alt="logo"
 							width="141" height="26"
 						>
 					</a>
@@ -78,7 +82,7 @@
 			<aside class="sidebar">
 				<nav class="sidebar__menu">
 					<ul class="sidebar__list">
-						<li>
+						<li class="sidebar__item">
 							<a href="#" class="sidebar__link" title="App">
 								<i class="sidebar__link-icon">
 									<img src="./images/icons/app.svg" alt="app" height="24" width="24">
@@ -86,7 +90,7 @@
 								<span class="sidebar__link-text">App</span>
 							</a>
 						</li>
-						<li>
+						<li class="sidebar__item">
 							<a href="/review.html" class="sidebar__link" title="Review">
 								<i class="sidebar__link-icon">
 									<img src="./images/icons/review.svg" alt="app" height="24" width="24">
@@ -121,22 +125,22 @@
 										srcset="./images/banners/banner-mobile-1.webp"
 										type="image/webp"
 										media="(max-width: 499px)"
-									/>
+									>
 									<source
 										srcset="./images/banners/banner-tablet-1.webp"
 										type="image/webp"
 										media="(min-width: 500px) and (max-width: 767px)"
-									/>
+									>
 									<source
 										srcset="./images/banners/banner-laptop-1.webp"
 										type="image/webp"
 										media="(min-width: 768px) and (max-width: 1199px)"
-									/>
+									>
 									<source
 										srcset="./images/banners/banner-desktop-1.webp"
 										type="image/webp"
 										media="(min-width: 1200px)"
-									/>
+									>
 									
 									<img
 										src="./images/banners/banner-mobile-1.webp"
@@ -145,7 +149,7 @@
 										width="360"
 										height="240"
 										class="main-banner__image"
-									/>
+									>
 								</picture>
 							</div>
 						</div>
@@ -222,7 +226,7 @@
 						<p>Don’t wait—visit Rolletto Casino online today and see why players across the globe choose Rolletto Casino UK for the ultimate gaming experience!</p>
 					</section>
 					
-					<section class="mini-game">
+					<div class="mini-game">
 						<div class="mini-game__item">
 							<img
 								src="images/banners/mini-game-1.webp"
@@ -307,7 +311,7 @@
 							<button class="mini-game__button psvn">Game</button>
 						</div>
 					
-					</section>
+					</div>
 					
 					<section>
 						<h2>Rolletto Casino Bonuses and Promotions</h2>

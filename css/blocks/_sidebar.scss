@@ -11,9 +11,16 @@
   transition-duration: $transition-duration;
 
   &__menu {
-    margin-top: $header-height;
     padding-top: rem(8);
     padding-inline: $sidebar-padding-inline;
+
+    @include mobile-above {
+      margin-top: $header-height;
+    }
+    @include mobile {
+      margin-top: $header-height-mobile;
+      border-top: $border;
+    }
   }
 
   &__list {
@@ -21,15 +28,22 @@
     flex-direction: column;
     row-gap: rem(5);
   }
+  &__item {
+    @include mobile {
+      @include flex-center;
+    }
+  }
 
   &__link {
-    width: 100%;
     position: relative;
     align-items: center;
     min-height: $sidebar-icon-size;
     padding-left: $sidebar-icon-size;
     border-radius: $border-radius;
 
+    @include mobile-above {
+      width: 100%;
+    }
 
     @include hover {
       background-color: $color-dark-10;

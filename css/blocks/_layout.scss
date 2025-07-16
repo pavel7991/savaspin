@@ -1,8 +1,10 @@
 @use '../helpers/index' as *;
 
 .layout {
+  position: relative;
   min-height: 100vh;
   display: grid;
+  overflow-x: hidden;
   grid-template-rows: $header-height 1fr auto;
   grid-template-areas:
     "header"
@@ -10,9 +12,11 @@
     "footer"
   ;
   transition-duration: $transition-duration;
-  padding-left: $sidebar-width;
   transition: transform $transition-duration;
 
+  @include mobile-above {
+    padding-left: $sidebar-width;
+  }
 
   .main-content, footer {
     position: relative;
@@ -26,7 +30,7 @@
       left: calc($sidebar-open-width - $sidebar-width);
     }
   }
-  @include tablet {
+  @include mobile-tablet {
     &.menu-is-open .main-content, &.menu-is-open .footer  {
       left: calc($sidebar-open-width-tablet - $sidebar-width);
     }
@@ -37,13 +41,30 @@
       width: $sidebar-open-width;
     }
   }
-  @include tablet {
+  @include mobile-tablet {
     &.menu-is-open .sidebar, &.menu-is-open .burger-menu {
       width: $sidebar-open-width-tablet;
     }
   }
 
+  @include mobile {
+    &.menu-is-open .sidebar, &.menu-is-open .burger-menu {
+      width: 100%;
+    }
+  }
+
+
+  @include mobile {
+    & .sidebar {
+      left: -100%;
+    }
+    &.menu-is-open .sidebar {
+      left: 0;
+    }
+  }
+
 }
+
 
 
 
