@@ -14,11 +14,16 @@ body {
 }
 
 section {
-  margin-block: $margin-block-section;
+  margin-top: $margin-block-section;
+  padding-bottom: $margin-block-section;
+}
+
+section:not(:last-child) {
+  border-bottom: $border;
 }
 
 hr {
-  border-color: $border-color;
+  border-color: red;
 }
 
 h1, h2, h3, h4, h5, h6 {

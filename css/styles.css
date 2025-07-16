@@ -236,11 +236,16 @@ body {
 }
 
 section {
-  margin-block: clamp(1.25rem, 0.9919977925rem + 1.1037527594vw, 1.875rem);
+  margin-top: clamp(1.25rem, 0.9919977925rem + 1.1037527594vw, 1.875rem);
+  padding-bottom: clamp(1.25rem, 0.9919977925rem + 1.1037527594vw, 1.875rem);
+}
+
+section:not(:last-child) {
+  border-bottom: 1px solid rgba(88, 92, 131, 0.3019607843);
 }
 
 hr {
-  border-color: rgba(88, 92, 131, 0.3019607843);
+  border-color: red;
 }
 
 h1, h2, h3, h4, h5, h6 {
