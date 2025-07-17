@@ -1,0 +1,114 @@
+@use '../helpers' as *;
+.content-nav {
+
+  &.is-open .content-nav__toggle-btn {
+    background-color: rgba($color-dark-30, 0.9);
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  &__toggle-btn {
+    position: relative;
+    display: block;
+    width: 100%;
+    text-align: left;
+    background-color: $color-dark-10;
+    border: none;
+    color: $color-white;
+    position: relative;
+    height: rem(50);
+    padding-inline: rem(40);
+    border-radius: $border-radius;
+    @include fluid-text(18, 16);
+    transition: background-color $transition-duration;
+
+    @include hover {
+      background-color: rgba($color-dark-30, 0.9);
+    }
+
+    &::before, &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%) rotate(0deg);
+      @include square(rem(24));
+      background-size: cover;
+    }
+    &::before {
+      left: rem(10);
+      background-image: url('~icons/category.svg');
+    }
+    &::after {
+      right: rem(10);
+      background-image: url('~icons/arr-down.svg') ;
+      transform-origin: center;
+      transition-duration: $transition-duration;
+    }
+    .hide {
+      display: none;
+    }
+  }
+
+  &.is-open .content-nav__toggle-btn::after {
+    transform: translateY(-50%) rotate(180deg);
+  }
+
+  &.is-open .content-nav__toggle-btn {
+    .show {
+      display: none;
+    }
+    .hide {
+      display: block;
+    }
+  }
+
+  &__body {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease-in-out;
+  }
+
+  &.is-open .content-nav__body {
+    max-height: 1000px;
+    opacity: 1;
+  }
+
+  &__list {
+    @include responsive-grid(1, 2, 3, 0.5rem);
+    padding: rem(20);
+    background-color: rgba($color-dark-30, 0.1);
+    border-bottom-left-radius: $border-radius;
+    border-bottom-right-radius: $border-radius;
+  }
+
+  &__item {
+
+  }
+
+  &__link {
+    position: relative;
+    display: block;
+    @include fluid-text(18, 16);
+    line-height: rem(24);
+    padding-left: 1.5rem;
+
+    @include hover {
+      color: $color-white;
+
+      &::before {
+        color: rgba($color-accent, 1);
+      }
+    }
+
+    &::before {
+      position: absolute;
+      left: 0; top: 0;
+      font-weight: 700;
+      content: '#';
+      color: rgba($color-accent, 0.6);
+      margin-right: rem(10);
+      text-decoration: none;
+    }
+  }
+}

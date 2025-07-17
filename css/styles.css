@@ -103,36 +103,17 @@ button {
 }
 
 html {
-  /**
-    Пригодится в большинстве ситуаций
-    (когда, например, нужно будет "прижать" футер к низу сайта)
-   */
   height: 100%;
-  /**
-    Убираем скачок интерфейса по горизонтали
-    при появлении / исчезновении scrollbar
-    (в некоторых браузерах)
-   */
   scrollbar-gutter: stable;
 }
 
-/**
-  Плавный scroll
- */
 html,
 :has(:target) {
   scroll-behavior: smooth;
 }
 
 body {
-  /**
-    Пригодится в большинстве ситуаций
-    (когда, например, нужно будет "прижать" футер к низу сайта)
-   */
   min-height: 100%;
-  /**
-    Унифицированный интерлиньяж
-   */
   line-height: 1.4;
 }
 
@@ -143,9 +124,6 @@ a:where([class]) {
   display: inline-flex;
 }
 
-/**
-  Курсор-рука при наведении на элемент
- */
 button,
 label {
   cursor: pointer;
@@ -262,22 +240,18 @@ section, .mini-game, .auth-form {
 }
 
 @media (min-width: 31.31125rem) {
-  .anchor-target {
+  h2[id] {
     scroll-margin-top: calc(4rem + 1.25rem);
   }
 }
 @media (max-width: 31.31125rem) {
-  .anchor-target {
+  h2[id] {
     scroll-margin-top: calc(5rem + 1.25rem);
   }
 }
 
 section:not(:last-child) {
   border-bottom: 1px solid rgba(88, 92, 131, 0.3019607843);
-}
-
-hr {
-  border-color: red;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -790,6 +764,7 @@ a[aria-label]::before, button[aria-label]::before {
 .mini-game {
   display: grid;
   gap: 1rem;
+  border-bottom: 1px solid rgba(88, 92, 131, 0.3019607843);
 }
 @media (max-width: 31.31125rem) {
   .mini-game {
@@ -1285,6 +1260,186 @@ a[aria-label]::before, button[aria-label]::before {
     opacity: 1;
   }
 }
+.content-nav.is-open .content-nav__toggle-btn {
+  background-color: rgba(32, 87, 87, 0.9);
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.content-nav__toggle-btn {
+  position: relative;
+  display: block;
+  width: 100%;
+  text-align: left;
+  background-color: #0F3A3A;
+  border: none;
+  color: #fff;
+  position: relative;
+  height: 3.125rem;
+  padding-inline: 2.5rem;
+  border-radius: 0.3125rem;
+  font-size: clamp(1rem, 0.9483995585rem + 0.2207505519vw, 1.125rem);
+  transition: background-color 0.3s;
+}
+@media (any-hover: hover) {
+  .content-nav__toggle-btn:hover {
+    background-color: rgba(32, 87, 87, 0.9);
+  }
+}
+@media (any-hover: none) {
+  .content-nav__toggle-btn:active {
+    background-color: rgba(32, 87, 87, 0.9);
+  }
+}
+.content-nav__toggle-btn::before, .content-nav__toggle-btn::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) rotate(0deg);
+  width: 1.5rem;
+  height: 1.5rem;
+  background-size: cover;
+}
+.content-nav__toggle-btn::before {
+  left: 0.625rem;
+  background-image: url("~icons/category.svg");
+}
+.content-nav__toggle-btn::after {
+  right: 0.625rem;
+  background-image: url("~icons/arr-down.svg");
+  transform-origin: center;
+  transition-duration: 0.3s;
+}
+.content-nav__toggle-btn .hide {
+  display: none;
+}
+.content-nav.is-open .content-nav__toggle-btn::after {
+  transform: translateY(-50%) rotate(180deg);
+}
+.content-nav.is-open .content-nav__toggle-btn .show {
+  display: none;
+}
+.content-nav.is-open .content-nav__toggle-btn .hide {
+  display: block;
+}
+.content-nav__body {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.3s ease-in-out;
+}
+.content-nav.is-open .content-nav__body {
+  max-height: 1000px;
+  opacity: 1;
+}
+.content-nav__list {
+  display: grid;
+  gap: 0.5rem;
+  padding: 1.25rem;
+  background-color: rgba(32, 87, 87, 0.1);
+  border-bottom-left-radius: 0.3125rem;
+  border-bottom-right-radius: 0.3125rem;
+}
+@media (max-width: 31.31125rem) {
+  .content-nav__list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media (min-width: 31.31125rem) and (max-width: 64.06125rem) {
+  .content-nav__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 64.06125rem) {
+  .content-nav__list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.content-nav__link {
+  position: relative;
+  display: block;
+  font-size: clamp(1rem, 0.9483995585rem + 0.2207505519vw, 1.125rem);
+  line-height: 1.5rem;
+  padding-left: 1.5rem;
+}
+@media (any-hover: hover) {
+  .content-nav__link:hover {
+    color: #fff;
+  }
+  .content-nav__link:hover::before {
+    color: #0af522;
+  }
+}
+@media (any-hover: none) {
+  .content-nav__link:active {
+    color: #fff;
+  }
+  .content-nav__link:active::before {
+    color: #0af522;
+  }
+}
+.content-nav__link::before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-weight: 700;
+  content: "#";
+  color: rgba(10, 245, 34, 0.6);
+  margin-right: 0.625rem;
+  text-decoration: none;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 2rem;
+}
+.table th, .table td {
+  padding: clamp(0.625rem, 0.3669977925rem + 1.1037527594vw, 1.25rem);
+  text-align: center;
+  border: 1px solid rgba(88, 92, 131, 0.3019607843);
+}
+@media (min-width: 48.06125rem) {
+  .table th, .table td {
+    vertical-align: top;
+  }
+}
+@media (min-width: 48.06125rem) {
+  .table th, .table td {
+    vertical-align: center;
+  }
+}
+.table thead {
+  background-color: #0F3A3A;
+}
+.table thead th {
+  font-weight: 700;
+  font-size: clamp(1rem, 0.896799117rem + 0.4415011038vw, 1.25rem);
+  text-transform: uppercase;
+  color: #fff;
+}
+.table tbody tr td {
+  font-size: clamp(0.875rem, 0.8233995585rem + 0.2207505519vw, 1rem);
+  transition-duration: 0.3s;
+}
+.table tbody tr td:first-child {
+  background-color: rgba(32, 87, 87, 0.2);
+}
+.table tbody tr td:last-child {
+  background-color: rgba(32, 87, 87, 0.1);
+}
+@media (any-hover: hover) {
+  .table tbody tr:hover td {
+    color: #fff;
+    background-color: rgba(32, 87, 87, 0.9);
+  }
+}
+@media (any-hover: none) {
+  .table tbody tr:active td {
+    color: #fff;
+    background-color: rgba(32, 87, 87, 0.9);
+  }
+}
+
 .info-page-content h1 {
   font-size: clamp(1.75rem, 1.646799117rem + 0.4415011038vw, 2rem);
 }

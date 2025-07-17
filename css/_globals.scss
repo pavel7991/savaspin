@@ -1,6 +1,7 @@
 @use 'helpers' as *;
 
 html {
+
   &.is-lock {
     overflow: hidden;
   }
@@ -18,7 +19,7 @@ section, .mini-game, .auth-form {
   padding-bottom: $margin-block-section;
 }
 
-.anchor-target {
+h2[id] {
   @include mobile-above {
     scroll-margin-top: calc($header-height + rem(20));
   }
@@ -31,9 +32,6 @@ section:not(:last-child) {
   border-bottom: $border;
 }
 
-hr {
-  border-color: red;
-}
 
 h1, h2, h3, h4, h5, h6 {
   color: $color-white;

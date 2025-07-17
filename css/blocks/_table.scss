@@ -1,0 +1,56 @@
+@use '../helpers' as *;
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 2rem;
+
+  th, td {
+    padding: fluid(20, 10);
+    text-align: center;
+    border: $border;
+
+    @include tablet-above {
+      vertical-align: top;
+    }
+    @include tablet-above {
+      vertical-align: center;
+    }
+  }
+
+  thead {
+    background-color: $color-dark-10;
+
+    th {
+      font-weight: 700;
+      @include fluid-text(20, 16);
+      text-transform: uppercase;
+      color: $color-white;
+    }
+  }
+
+  tbody {
+    tr {
+      td {
+        @include fluid-text(16, 14);
+        transition-duration: $transition-duration;
+      }
+
+      td:first-child {
+        background-color: rgba($color-dark-30, 0.2);
+      }
+      td:last-child {
+        background-color: rgba($color-dark-30, 0.1);
+      }
+
+
+      @include hover {
+        td {
+          color: $color-white;
+          background-color: rgba($color-dark-30, 0.9);
+        }
+      }
+    }
+  }
+
+
+}

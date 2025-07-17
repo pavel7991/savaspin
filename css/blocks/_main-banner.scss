@@ -16,7 +16,7 @@
   & {
     @include hover {
       .main-banner__content {
-        background-color: rgba($color-dark-30, 0.9);
+        background-color: rgba($color-dark-20, 0.9);
       }
     }
   }
@@ -29,8 +29,8 @@
     padding-block: fluid(40, 10);
     padding-inline: fluid(60, 15);
     border-radius: rem(10);
-    background-color: rgba($color-dark-30, 0.8);
-    box-shadow: 1px 2px 20px rgba($color-dark-30, 0.8);
+    background-color: rgba($color-dark-20, 0.8);
+    box-shadow: 1px 2px 20px rgba($color-dark-20, 0.8);
     transition-duration: $transition-duration;
 
     &-title {

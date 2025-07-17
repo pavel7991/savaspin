@@ -4,6 +4,7 @@
 
 .mini-game {
   @include responsive-grid;
+  border-bottom: $border;
 
   &__item {
     position: relative;
