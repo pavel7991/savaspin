@@ -7,13 +7,18 @@
 	};
 
 	const smoothScrollToTop = () => {
+		const html = document.documentElement;
+		const originalScrollBehavior = html.style.scrollBehavior;
+		html.style.scrollBehavior = 'auto';
 
 		const scrollStep = () => {
 			const currentScroll = window.scrollY || document.documentElement.scrollTop;
 			if (currentScroll > 0) {
-				document.documentElement.style.scrollBehavior = 'auto';
+				html.style.scrollBehavior = 'auto';
 				window.scrollBy(0, -Math.max(10, currentScroll / 10));
 				requestAnimationFrame(scrollStep);
+			} else {
+				html.style.scrollBehavior = originalScrollBehavior;
 			}
 		};
 		requestAnimationFrame(scrollStep);

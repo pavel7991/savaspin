@@ -81,7 +81,7 @@
     z-index: 4;
     position: absolute;
     top: 100%; left: 50%;
-    transform: translate(-50%, 0);
+    transform: translate(-50%, -50%);
     @extend %button-primary;
     font-size: rem(14);
     border-radius: rem(5);
@@ -96,7 +96,6 @@
         top: 50%;
         opacity: 1;
     }
-
   }
 
 }

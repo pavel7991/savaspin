@@ -113,7 +113,16 @@
 							<div class="main-banner__wrapper">
 								<div class="main-banner__content">
 									<div class="main-banner__content-title">Your Jackpot is Here</div>
-									<button class="main-banner__content-btn psvn" type="button">Play</button>
+									<button class="main-banner__content-btn main-banner__content-btn--icon psvn" type="button">
+										<i class="fi-google_play" aria-label="google play"></i>
+										<span>Play</span>
+										<i class="fi-app_store" aria-label="apple store"></i>
+									</button>
+									
+									<button class="promo-code-btn" type="button" data-js-promo-code>
+										<div class="promo-code-btn__copy">RICH2024</div>
+										<span class="promo-code-btn__text">Copied</span>
+									</button>
 								</div>
 								
 								<div class="main-banner__img-overlay">
@@ -156,8 +165,33 @@
 							favourite sports, all from the palm of your hand. With Rolletto, every game is just a tap away!</p>
 					</section>
 					
+					
+					<section class="content-nav" data-js-dropdown>
+						<h2>Content navigation</h2>
+						<button class="content-nav__toggle-btn" type="button" data-js-dropdown-toggle>
+							<span class="show">View contents</span>
+							<span class="hide">Hide contents</span>
+						</button>
+						<div class="content-nav__body">
+							<ul class="content-nav__list" role="navigation">
+								<li class="content-nav__item">
+									<a href="#Rolletto’s-Mobile-Casino-Website" class="content-nav__link">Rolletto’s Mobile Casino Website</a>
+								</li>
+								<li class="content-nav__item">
+									<a href="#How-Use-Rolletto-Casino-Website" class="content-nav__link">How to Use the Rolletto Casino Website</a>
+								</li>
+								<li class="content-nav__item">
+									<a href="#Conclusion" class="content-nav__link">Conclusion</a>
+								</li>
+								<li class="content-nav__item">
+									<a href="#FAQ" class="content-nav__link">FAQ</a>
+								</li>
+							</ul>
+						</div>
+					</section>
+					
 					<section>
-						<h2>Rolletto’s Mobile Casino Website</h2>
+						<h2 id="Rolletto’s-Mobile-Casino-Website">Rolletto’s Mobile Casino Website</h2>
 						<p>Enjoy the thrill of premium casino gaming right from your mobile device with Rolletto’s advanced browser-based platform. Designed for ease, speed, and excitement, this website turns your phone or tablet into the ultimate gaming hub. No downloads are required—just instant access to an extensive library of games and secure features tailored for seamless play on the go.</p>
 						<h3>Benefits of Using Rolletto’s Mobile Casino Website</h3>
 						<ul>
@@ -172,7 +206,7 @@
 					</section>
 					
 					<section>
-						<h2>How to Use the Rolletto Casino Website</h2>
+						<h2 id="How-Use-Rolletto-Casino-Website">How to Use the Rolletto Casino Website</h2>
 						<p>Dive into the exhilarating world of online gaming with Rolletto Casino! Whether you’re a fan of high-stakes thrills or casual gameplay, our dynamic platform brings you a vast array of games, including slots, table favourites, and live dealer experiences. Best of all, there’s no need to download an app—everything is accessible directly through our mobile-optimised website!</p>
 						<p>Experience unparalleled convenience and functionality with Rolletto Casino’s fully responsive mobile site, designed to deliver an exceptional gaming experience on a variety of devices. Whether you’re at home using your desktop or laptop, relaxing with a tablet, or on the move with your smartphone, Rolletto ensures that you have seamless access to all your favourite games and features. The mobile site is crafted to adapt perfectly to different screen sizes, offering smooth navigation, stunning visuals, and fast load times. No matter your device, Rolletto makes it easy to dive into thrilling gameplay without the need for downloads or complicated setups, allowing you to start playing instantly wherever you are:</p>
 						<h4>Android</h4>
@@ -213,9 +247,8 @@
 						<p>Wherever you go, the Rolletto Casino App experience pon the mobile website lets you carry all the excitement in your pocket. With no need to download additional software, you’ll find it easy to immerse yourself in the thrill of gaming right from your browser.</p>
 					</section>
 					
-					
 					<section>
-						<h2>Conclusion</h2>
+						<h2 id="Conclusion">Conclusion</h2>
 						<p>Rolletto makes gaming effortless with its seamless platform, accessible across all your favourite devices.
 							Whether you prefer playing on a desktop at home, a laptop while travelling, or browsing via your smartphone or tablet,
 							the mobile-friendly website ensures a smooth and enjoyable experience.</p>
@@ -224,7 +257,11 @@
 							<div class="main-banner__wrapper">
 								<div class="main-banner__content">
 									<div class="main-banner__content-title">Big Wins Await!</div>
-									<button class="main-banner__content-btn psvn" type="button">Play</button>
+									<button class="main-banner__content-btn main-banner__content-btn--icon psvn" type="button">
+										<i class="fi-google_play" aria-label="google play"></i>
+										<span>Play</span>
+										<i class="fi-app_store" aria-label="apple store"></i>
+									</button>
 								</div>
 								
 								<div class="main-banner__img-overlay">
@@ -268,7 +305,7 @@
 						<p>While there isn’t a dedicated Rolletto Casino App, the website’s smart, intuitive design replicates an app-like experience. It’s fast, reliable, and easy to use—just open your browser, visit the site, and immerse yourself in a world of exciting games anytime, anywhere.</p>
 					</section>
 					
-					<section class="anchor-target" id="faq">
+					<section id="FAQ">
 						<h2>FAQ</h2>
 						<h3>Can I access Rolletto on different devices?</h3>
 						<p>Yes, Rolletto supports desktops, laptops, tablets, and smartphones, ensuring smooth gameplay on any device.</p>
@@ -305,7 +342,7 @@
 							<li><a href="./contacts.html" class="footer__nav-link">Contacts</a></li>
 							<li><a href="./private_policy.html" class="footer__nav-link">Privacy Policy</a></li>
 							<li><a href="./terms_conditions.html" class="footer__nav-link">Terms & Conditions</a></li>
-							<li><a href="#faq" class="footer__nav-link">FAQs</a></li>
+							<li><a href="#FAQ" class="footer__nav-link">FAQs</a></li>
 						</ul>
 					</nav>
 					
@@ -324,7 +361,11 @@
 			
 		</div><!--END layout-->
 		
+		
+		
 		<script src="scripts/main.js" defer></script>
+		<script src="scripts/dropdown.js" defer></script>
+		<script src="scripts/copy-promo-code.js" defer></script>
 		<script src="scripts/open-sidebar.js" defer></script>
 		<script src="scripts/main.js" defer></script>
 		<script src="scripts/scrollToTop.js" defer></script>

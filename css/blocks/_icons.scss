@@ -1,0 +1,19 @@
+@use "../helpers" as *;
+
+@mixin icon($icon, $width: rem(24), $height: rem(24)) {
+  display: flex;
+  width: $width;
+  height: $height;
+  background-image: url('~icons/#{$icon}.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.fi {
+  &-google_play {
+    @include icon('google-play');
+  }
+  &-app_store {
+    @include icon('app-store');
+  }
+}

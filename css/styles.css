@@ -705,6 +705,11 @@ a[aria-label]::before, button[aria-label]::before {
   padding-block: clamp(0.3125rem, 0.1834988962rem + 0.5518763797vw, 0.625rem);
   padding-inline: clamp(0.625rem, 0.3669977925rem + 1.1037527594vw, 1.25rem);
 }
+.main-banner__content-btn--icon {
+  display: flex;
+  align-items: center;
+  column-gap: 0.625rem;
+}
 .main-banner__img-overlay {
   width: 100%;
   height: 100%;
@@ -759,6 +764,48 @@ a[aria-label]::before, button[aria-label]::before {
   .main-banner:active .main-banner__image {
     transform: translate(-50%, -50%) scale(1.1);
   }
+}
+
+.promo-code-btn {
+  display: block;
+  margin: 0.625rem auto 0.3125rem;
+  padding-block: clamp(0.5rem, 0.3193984547rem + 0.7726269316vw, 0.9375rem);
+  padding-inline: clamp(0.625rem, 0.3669977925rem + 1.1037527594vw, 1.25rem);
+  max-width: 10.3125rem;
+  width: 100%;
+  position: relative;
+  border: 2px dotted #000;
+  text-transform: uppercase;
+  font-weight: 700;
+  background: #fff;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+}
+.promo-code-btn:hover {
+  background-color: #3D5CFF;
+  color: #fff;
+}
+.promo-code-btn__text {
+  pointer-events: none;
+  padding: 0.625rem 1.25rem;
+  border-radius: 20px;
+  position: absolute;
+  left: 50%;
+  top: -2.5em;
+  transform: translateX(-50%) translateY(0);
+  opacity: 0;
+  color: #fff;
+  font-size: 0.75rem;
+  white-space: nowrap;
+  transition: all 0.4s ease;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+  z-index: 2;
+  border: 2px solid #fff;
+  background-color: rgba(10, 245, 34, 0.9);
+}
+.promo-code-btn__text.visible {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-10px);
 }
 
 .mini-game {
@@ -848,7 +895,7 @@ a[aria-label]::before, button[aria-label]::before {
   position: absolute;
   top: 100%;
   left: 50%;
-  transform: translate(-50%, 0);
+  transform: translate(-50%, -50%);
   font-size: 0.875rem;
   border-radius: 0.3125rem;
   font-weight: 500;
@@ -1260,6 +1307,23 @@ a[aria-label]::before, button[aria-label]::before {
     opacity: 1;
   }
 }
+.fi-google_play {
+  display: flex;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-image: url("~icons/google-play.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.fi-app_store {
+  display: flex;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-image: url("~icons/app-store.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 .content-nav.is-open .content-nav__toggle-btn {
   background-color: rgba(32, 87, 87, 0.9);
   border-bottom-left-radius: 0;
