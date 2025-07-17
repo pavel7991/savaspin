@@ -3,6 +3,7 @@
 
 .auth-form {
   @include flex-center;
+  border-bottom: $border;
 
   &__link {
     border-radius: rem(20);

@@ -113,7 +113,7 @@
 							name="email"
 							id="form-email"
 							placeholder="Email"
-						/>
+						>
 						<div class="contact-form__error" id="form-email-error"></div>
 					</div>
 					
@@ -161,12 +161,24 @@
 			</div>
 		</div>
 	</footer>
-
 </div><!--END layout-->
 
+<div class="modal" id="success-modal" data-js-modal>
+	<div class="modal__overlay" data-js-modal-overlay></div>
+	<div class="modal__content" role="dialog" aria-modal="true">
+		<button class="modal__close" type="button" data-js-modal-close></button>
+		<div class="modal__body">
+			<p>Your message has been sent successfully!</p>
+		</div>
+	</div>
+</div>
+
+<script src="scripts/main.js" defer></script>
 <script src="scripts/open-sidebar.js" defer></script>
+<script src="scripts/modal.js" defer></script>
 <script src="scripts/validate-contact-form.js" defer></script>
 <script src="scripts/scrollToTop.js" defer></script>
+
 </body>
 </html>
 

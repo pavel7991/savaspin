@@ -1,0 +1,52 @@
+@use '../helpers' as *;
+
+.modal {
+  display: none;
+  z-index: $z-index-modal;
+  position: fixed;
+  inset: 0;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+
+
+  &.is-active {
+    display: flex;
+    animation: fadeIn 0.3s ease-in-out;
+  }
+}
+
+.modal__content {
+  max-width: rem(400);
+  width: 90%;
+  background: $color-dark-10;
+  padding: 3rem;
+  border-radius: 8px;
+  position: relative;
+  border: $border;
+  box-shadow: $box-shadow;
+  color: #fff;
+  animation: slideIn 0.3s ease-out;
+}
+
+.modal__close {
+  @include square(rem(24));
+  position: absolute;
+  top: 0.5rem;
+  right: 0.75rem;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  background-image: url('~icons/close.svg');
+  background-size: cover;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from { transform: translateY(-20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}

@@ -17,6 +17,7 @@ class ContactForm {
 		this.messageInputElement = this.formElement.querySelector(this.selectors.message)
 		this.errorEmailElement = this.formElement.querySelector(this.selectors.errorEmail)
 		this.errorMessageElement = this.formElement.querySelector(this.selectors.errorMessage)
+		this.successModal = new Modal('#success-modal')
 
 		this.bindEvents()
 	}
@@ -84,8 +85,9 @@ class ContactForm {
 	}
 
 	showSuccess() {
-		alert('✅ Your message has been sent successfully!')
+		this.successModal.open()
 	}
 }
 
 new ContactForm()
+
