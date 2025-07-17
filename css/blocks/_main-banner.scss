@@ -2,11 +2,12 @@
 @use '../components/index' as *;
 
 .main-banner {
+  margin-bottom: 24px;
 
   &__wrapper {
     position: relative;
     @include flex-center;
-    min-height: fluid(450, 150);
+    min-height: fluid(450, 155);
     padding-block: fluid(20, 10);
     border-radius: rem(10);
     overflow: hidden;
@@ -24,21 +25,24 @@
     z-index: 2;
     @include flex-center(true);
     flex-direction: column;
-    row-gap: 1rem;
-    padding-block: fluid(80, 20);
-    padding-inline: fluid(200, 20);
+    row-gap: fluid(16, 8);
+    padding-block: fluid(40, 10);
+    padding-inline: fluid(60, 15);
     border-radius: rem(10);
     background-color: rgba($color-dark-30, 0.8);
     box-shadow: 1px 2px 20px rgba($color-dark-30, 0.8);
     transition-duration: $transition-duration;
-    &-title {
 
+    &-title {
+      @include fluid-text(36, 18);
+      color: $color-white;
     }
 
     &-btn {
       @extend %button-primary;
-      padding: 0.6rem 1.5rem;
-      font-size: 1rem;
+      @include fluid-text(16, 12);
+      padding-block: fluid(10, 5);
+      padding-inline: fluid(20, 10);
     }
   }
 

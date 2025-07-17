@@ -87,10 +87,7 @@
 </head>
 
 <body>
-<div
-	class="layout"
-	data-js-layout
->
+<div class="layout" data-js-layout>
 	<header class="header">
 		<div class="container">
 			<div class="header__content">
@@ -100,7 +97,7 @@
 					href="/"
 				>
 					<img
-						alt="logo"
+						alt="Sava spin logo"
 						height="32"
 						src="./images/icons/logo.svg"
 						width="83"
@@ -112,7 +109,7 @@
 					href="/"
 				>
 					<img
-						alt="logo"
+						alt="Sava spin logo"
 						height="20"
 						src="./images/icons/logo-inline.svg"
 						width="108"
@@ -120,16 +117,8 @@
 				</a>
 				
 				<div class="header__auth">
-					<a
-						class="header__auth-login"
-						href="/login.html"
-					>Log in
-					</a>
-					<button
-						class="header__auth-sing-up psvn"
-						type="button"
-					>Sing up
-					</button>
+					<a class="header__auth-login" href="/login.html">Log in</a>
+					<button class="header__auth-sing-up psvn" type="button">Sing up</button>
 				</div>
 			</div>
 		</div>
@@ -141,6 +130,7 @@
 				<button
 					aria-label="open menu"
 					class="burger-menu__btn"
+					type="button"
 					data-js-burger-button
 				>
 					<img
@@ -153,10 +143,10 @@
 			</div>
 			<a
 				class="burger-menu__logo"
-				href="/"
+				href="./index.html"
 			>
 				<img
-					alt="logo"
+					alt="Sava spin logo"
 					height="26"
 					src="./images/icons/logo-inline.svg"
 					width="141"
@@ -843,60 +833,30 @@
 		</div>
 	</main>
 	
-	<div
-		class="scroll-to-up"
-		data-js-scroll-to-up
-	>
-		<button
-			aria-label="scroll to up"
-			class="scroll-to-up__btn"
-		></button>
+	<div class="scroll-to-up" data-js-scroll-to-up>
+		<button aria-label="scroll to up" type="button" class="scroll-to-up__btn"></button>
 	</div>
 	
 	<footer class="footer">
 		<div class="container">
 			<nav class="footer__nav">
 				<ul class="footer__nav-list">
-					<li>
-						<a
-							class="footer__nav-link"
-							href="./contacts.html"
-						>Contacts
-						</a>
-					</li>
-					<li>
-						<a
-							class="footer__nav-link"
-							href="./private_policy.html"
-						>Privacy Policy
-						</a>
-					</li>
-					<li>
-						<a
-							class="footer__nav-link"
-							href="./terms_conditions.html"
-						>Terms & Conditions
-						</a>
-					</li>
-					<li>
-						<a
-							class="footer__nav-link"
-							href="#"
-						>FAQs
-						</a>
-					</li>
+					<li><a href="./contacts.html" class="footer__nav-link">Contacts</a></li>
+					<li><a href="./private_policy.html" class="footer__nav-link">Privacy Policy</a></li>
+					<li><a href="./terms_conditions.html" class="footer__nav-link">Terms & Conditions</a></li>
+					<li><a href="#faq" class="footer__nav-link">FAQs</a></li>
 				</ul>
 			</nav>
 			
 			<div class="footer__copyright">
 				<img
-					alt="18+"
+					src="./images/icons/censor.svg"
 					class="footer__copyright-icon"
-					height="24"
-					src="images/icons/censor.svg"
-					width="25"
+					height="24" width="25"
+					loading="lazy"
+					alt="18+"
 				>
-				<p>© savaspin.com 2025. All rights reserved.</p>
+				<div>© savaspin.com 2025. All rights reserved.</div>
 			</div>
 		</div>
 	</footer>

@@ -36,15 +36,15 @@
 			<header class="header">
 				<div class="container">
 					<div class="header__content">
-						<a href="/" class="header__logo" aria-label="Home">
-							<img src="./images/icons/logo.svg" alt="logo" height="32" width="83">
+						<a href="./index.html" class="header__logo" aria-label="Home">
+							<img src="./images/icons/logo.svg" alt="Sava spin logo" height="32" width="83">
 						</a>
-						<a href="/" class="header__logo-mobile" aria-label="Home">
-							<img src="./images/icons/logo-inline.svg" alt="logo" width="108" height="20">
+						<a href="./index.html" class="header__logo-mobile" aria-label="Home">
+							<img src="./images/icons/logo-inline.svg" alt="Sava spin logo" width="108" height="20">
 						</a>
 						
 						<div class="header__auth">
-							<a href="/login.html" class="header__auth-login">Log in</a>
+							<a href="./login.html" class="header__auth-login">Log in</a>
 							<button class="header__auth-sing-up psvn" type="button">Sing up</button>
 						</div>
 					</div>
@@ -57,6 +57,7 @@
 						<button
 							class="burger-menu__btn"
 							aria-label="open menu"
+							type="button"
 							data-js-burger-button
 						>
 							<img
@@ -66,10 +67,10 @@
 							>
 						</button>
 					</div>
-					<a href="/" class="burger-menu__logo">
+					<a href="./index.html" class="burger-menu__logo">
 						<img
 							src="./images/icons/logo-inline.svg"
-							alt="logo"
+							alt="Sava spin logo"
 							width="141" height="26"
 						>
 					</a>
@@ -101,18 +102,18 @@
 			
 			<main class="main-content">
 				<div class="container">
-					<div class="container">
-						<section>
+					<section>
 							<h1>Rolletto Casino Review</h1>
-							<p>Get ready to embark on an electrifying journey with our Rolletto casino review, where we uncover the magic behind one of the most exciting online gaming destinations. Whether you're a thrill-seeker drawn to heart-pounding slots or a strategic mind captivated by live table games, Rolletto promises an extraordinary experience tailored to all kinds of players.</p>
-							<p>From a sleek, user-friendly platform to enticing bonuses that amplify your winning potential, Rolletto stands out as a leader in online gaming. With robust security measures and a commitment to fairness, this is the go-to casino for those who crave both excitement and reliability. Dive in as we reveal why Rolletto is redefining the online gambling experience!</p>
-						</section>
+							<p>Get ready to embark on an electrifying journey with our Rolletto casino review, where we uncover the magic behind
+								one of the most exciting online gaming destinations. Whether you're a thrill-seeker drawn to heart-pounding slots or
+								a strategic mind captivated by live table games, Rolletto promises an extraordinary experience tailored to all kinds
+								of players.</p>
 						
-						<section class="main-banner">
+						<div class="main-banner">
 							<div class="main-banner__wrapper">
 								<div class="main-banner__content">
-									<h2>PlAY and WIN</h2>
-									<button class="main-banner__content-btn psvn" type="button">Go</button>
+									<div class="main-banner__content-title">Feel the Rush of Real Wins!</div>
+									<button class="main-banner__content-btn psvn" type="button">Play</button>
 								</div>
 								
 								<div class="main-banner__img-overlay">
@@ -141,17 +142,22 @@
 										<img
 											src="./images/banners/banner-mobile-2.webp"
 											alt="Rolletto Casino"
+											width="360" height="240"
 											loading="lazy"
-											width="360"
-											height="240"
 											class="main-banner__image"
 										>
 									</picture>
 								</div>
 							</div>
-						</section>
+						</div>
 						
-						<section>
+							<p>From a sleek, user-friendly platform to enticing bonuses that amplify your winning potential, Rolletto stands
+								out as a leader in online gaming. With robust security measures and a commitment to fairness, this is the go-to
+								casino for those who crave both excitement and reliability. Dive in as we reveal why Rolletto is redefining the
+								online gambling experience!</p>
+						</section>
+					
+					<section>
 							<h2>Honest and Insightful Trustpilot Reviews</h2>
 							<p>Trustpilot is the go-to platform for uncovering authentic customer opinions, making it an invaluable resource for anyone exploring online services. For those curious about Rolletto Casino Trustpilot, these reviews offer a first-hand glimpse into real user experiences, shedding light on the platform’s standout features and overall reputation.</p>
 							
@@ -396,7 +402,7 @@
 							</p>
 						</section>
 						
-						<section>
+					<section>
 							<h2>Languages at Rolletto</h2>
 							<p>At Rolletto, we celebrate diversity by offering our platform in a variety of languages. This ensures players from around the globe enjoy a tailored gaming experience in their native tongue. Here’s what we’ve got for you:</p>
 							<ul>
@@ -415,7 +421,7 @@
 							<p>With these options, Rolletto ensures a seamless experience for everyone. Explore the platform and check out Rolletto casino reviews for more insights!</p>
 						</section>
 						
-						<section>
+					<section>
 							<h2>The Masterminds Behind the Unforgettable Games</h2>
 							<p>At Rolletto, we don’t just offer games – we deliver extraordinary adventures! Partnering with the industry’s finest game developers, we bring you an exceptional selection of titles that promise to captivate, thrill, and entertain. Dive into our world of cutting-edge games tailored to every player’s unique taste.</p>
 							<h3>Pragmatic Play</h3>
@@ -432,7 +438,7 @@
 			</main>
 			
 			<div class="scroll-to-up" data-js-scroll-to-up>
-				<button class="scroll-to-up__btn" aria-label="scroll to up"></button>
+				<button class="scroll-to-up__btn" type="button" aria-label="scroll to up"></button>
 			</div>
 			
 			<footer class="footer">
@@ -442,18 +448,19 @@
 							<li><a href="./contacts.html" class="footer__nav-link">Contacts</a></li>
 							<li><a href="./private_policy.html" class="footer__nav-link">Privacy Policy</a></li>
 							<li><a href="./terms_conditions.html" class="footer__nav-link">Terms & Conditions</a></li>
-							<li><a href="#" class="footer__nav-link">FAQs</a></li>
+							<li><a href="#faq" class="footer__nav-link">FAQs</a></li>
 						</ul>
 					</nav>
 					
 					<div class="footer__copyright">
 						<img
-							src="images/icons/censor.svg"
+							src="./images/icons/censor.svg"
 							class="footer__copyright-icon"
-							alt="18+"
 							height="24" width="25"
+							loading="lazy"
+							alt="18+"
 						>
-						<p>© savaspin.com 2025. All rights reserved.</p>
+						<div>© savaspin.com 2025. All rights reserved.</div>
 					</div>
 				</div>
 			</footer>
